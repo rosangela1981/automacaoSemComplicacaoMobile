@@ -9,8 +9,9 @@ import java.net.URL;
 public class Driver {
     private static AppiumDriver AppiumDriver;
 
-    public static io.appium.java_client.AppiumDriver getAppiumDriver() {
+    public static AppiumDriver getAppiumDriver() {
         return AppiumDriver;
+
     }
 
     public static void inicializaDriver() throws MalformedURLException {
