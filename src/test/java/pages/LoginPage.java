@@ -1,22 +1,14 @@
 package pages;
 
 import core.Driver;
-import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import org.openqa.selenium.WebElement;
+import maps.LoginMaps;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
-    @AndroidFindBy(accessibility = "inputEmail")
-    public WebElement inpEmail;
+public class LoginPage extends LoginMaps {
 
-    @AndroidFindBy (accessibility = "inputPassword")
-    public WebElement inpPassword;
 
-    @AndroidFindBy (accessibility = "btnEntrar")
-    public WebElement btnEntrar;
-
-    public LoginPage(){
+    public LoginPage() {
         PageFactory.initElements(new AppiumFieldDecorator(Driver.getAppiumDriver()), this);
 
     }
@@ -27,4 +19,32 @@ public class LoginPage {
         btnEntrar.click();
 
     }
-}
+
+    public String gettxtEmailError() {
+        try {
+            return txtEmailError.getText();
+        } catch (Exception e) {
+            return txtAuthEmailError.getText();
+        }
+
+    }
+
+    public String getTxtPasswordError() {
+        try {
+            return txtPasswordError.getText();
+        } catch (Exception e) {
+            return txtAuthEmailError.getText();
+        }
+    }
+
+    public void clickLinkNaoTemConta(){
+        linkNaoTemConta.click();
+
+    }
+
+
+    }
+
+
+
+
