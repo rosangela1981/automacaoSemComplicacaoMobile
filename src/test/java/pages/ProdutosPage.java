@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class ProdutosPage extends ProdutosMaps {
 
 
-    public ProdutosPage() {
+    public ProdutosPage()  {
         PageFactory.initElements(new AppiumFieldDecorator(Driver.getAppiumDriver()), this);
     }
 
@@ -16,4 +16,9 @@ public class ProdutosPage extends ProdutosMaps {
         return txtTituloProdutos.getText();
     }
 
-}
+    public void clickPacoteCurso(){
+        btnPacoteCursos.click();
+
+    }
+    }
+
