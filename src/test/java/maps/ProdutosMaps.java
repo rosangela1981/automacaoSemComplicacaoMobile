@@ -10,4 +10,6 @@ public class ProdutosMaps {
     @AndroidFindBy(accessibility = "pacote_11_cursos_19_tecnologias_buttonComprar_home")
     protected WebElement btnPacoteCursos;
 
+
+
 }

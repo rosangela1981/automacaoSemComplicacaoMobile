@@ -1,6 +1,7 @@
 package testsChronos;
 
 import core.Driver;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import pages.LoginPage;
@@ -9,6 +10,7 @@ import pages.ProdutosPage;
 import java.net.MalformedURLException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 public class LoginTests {
     LoginPage loginPage;
@@ -38,11 +40,12 @@ public class LoginTests {
 
 
 
-      @Test
+
+    @Test
     public void realizarLoginEmailInvalido() {
 
         loginPage.realizarLogin("teste","123456");
-        assertEquals("O email não é válido.",loginPage.gettxtEmailError());
+        assertEquals("O email não é válido.",loginPage.getTxtEmailError());
       }
       @Test
       public void realizarLoginSenhaInvalida(){
@@ -53,7 +56,7 @@ public class LoginTests {
      @Test
      public void realizarLoginEmailEmBranco() {
          loginPage.realizarLogin("", "123456");
-         assertEquals("O campo de email é obrigatório", loginPage.gettxtEmailError());
+         assertEquals("O campo de email é obrigatório", loginPage.getTxtEmailError());
 
      }
      @Test
@@ -62,10 +65,11 @@ public class LoginTests {
          assertEquals("O campo senha é obrigatório", loginPage.getTxtPasswordError());
      }
 
-     @Test
+
+    @Test
      public void realizarLoginComEmailIncorreto(){
         loginPage.realizarLogin("incorreto@chronosacademy","123456");
-        assertEquals("Email ou senha incorretos.",loginPage.gettxtEmailError());
+        assertEquals("Email ou senha incorretos.",loginPage.getTxtEmailError());
      }
 
 

@@ -20,7 +20,7 @@ public class LoginPage extends LoginMaps {
 
     }
 
-    public String gettxtEmailError() {
+    public String getTxtEmailError() {
         try {
             return txtEmailError.getText();
         } catch (Exception e) {
