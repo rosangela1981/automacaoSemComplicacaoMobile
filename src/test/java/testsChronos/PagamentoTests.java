@@ -1,11 +1,9 @@
 package testsChronos;
 
-import com.google.common.collect.ImmutableMap;
+
 import core.Driver;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.JavascriptExecutor;
 import pages.DetalhesCursoPage;
 import pages.LoginPage;
 import pages.PagamentoPage;
